@@ -45,7 +45,7 @@ boxplot(myBP$estprojectcost)
 
 lh <- quantile(myBP$estprojectcost,probs=0.25)	#Lower hinge (first quartile)
 uh <- quantile(myBP$estprojectcost,probs=0.75)	#Upper hinge (third quartile)
-step<- 1.5 * (uh-lh)	                          #Define the step as 1.5×IQR
+step<- 1.5 * (uh-lh)	                          #Define the step as 1.5Ã—IQR
 
 eliminated <- subset(myBP, myBP$estprojectcost >= (lh - step) & myBP$estprojectcost <= (uh + step))
 boxplot(eliminated)
