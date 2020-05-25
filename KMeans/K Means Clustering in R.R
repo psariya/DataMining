@@ -3,7 +3,7 @@ library(corrplot)
 # Clustering
 library(cluster) 
 
-data <- read.csv('C:\\Users\\Priyanka\\Documents\\0. USF\\001. USF Volunteer\\Week 4\\Wholesale customers data.csv', header = TRUE)
+data <- read.csv('Wholesale customers data.csv', header = TRUE)
 head(data,5)
 
 data <- na.omit(data)
@@ -27,7 +27,7 @@ k <- 2:10
 avg_sil <- sapply(k, silhouette_score)
 plot(k, type='b', avg_sil, xlab='Number of clusters', ylab='Average Silhouette Scores', frame=FALSE)
 
-km.final <- kmeans(df, 5)
+km.final <- kmeans(df, 7)
 ## Total Within cluster sum of square
 km.final$tot.withinss
 
